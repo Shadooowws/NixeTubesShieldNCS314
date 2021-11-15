@@ -296,7 +296,7 @@ const long settingDelay = 150;
 bool BlinkUp = false;
 bool BlinkDown = false;
 unsigned long enteringEditModeTime = 0;
-bool RGBLedsOn = true;
+bool RGBLedsOn = false;
 #define RGBLEDsEEPROMAddress 0
 #define HourFormatEEPROMAddress 1
 #define AlarmTimeEEPROMAddress 2 //3,4,5
