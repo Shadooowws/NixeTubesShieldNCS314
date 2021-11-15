@@ -530,7 +530,7 @@ void loop() {
     prevTime4FireWorks = millis();
   }
 
-  if ((menuPosition == TimeIndex) || (modeChangedByUser == false) ) modesChanger();
+  //if ((menuPosition == TimeIndex) || (modeChangedByUser == false) ) modesChanger();
   doIndication();
 
   setButton.Update();
