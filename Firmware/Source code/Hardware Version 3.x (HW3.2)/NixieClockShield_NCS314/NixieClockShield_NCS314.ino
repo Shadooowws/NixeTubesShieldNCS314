@@ -65,7 +65,7 @@ const char HardwareVersion[] PROGMEM = {"NCS314 for HW 3.x"};
 #ifndef GRA_AND_AFCH_TIME_LIB_MOD
   #error The "Time (TimeLib)" library modified by GRA and AFCH must be used!
 #endif
-#include <Tone.h>
+//#include <Tone.h>
 #include <EEPROM.h>
 #include "doIndication314_HW3.x.h"
 #include <OneWire.h>
@@ -315,24 +315,24 @@ ClickButton upButton(pinUp, LOW, CLICKBTN_PULLUP);
 ClickButton downButton(pinDown, LOW, CLICKBTN_PULLUP);
 ///////////////////
 
-Tone tone1;
+//Tone tone1;
 #define isdigit(n) (n >= '0' && n <= '9')
 //char *song = "MissionImp:d=16,o=6,b=95:32d,32d#,32d,32d#,32d,32d#,32d,32d#,32d,32d,32d#,32e,32f,32f#,32g,g,8p,g,8p,a#,p,c7,p,g,8p,g,8p,f,p,f#,p,g,8p,g,8p,a#,p,c7,p,g,8p,g,8p,f,p,f#,p,a#,g,2d,32p,a#,g,2c#,32p,a#,g,2c,a#5,8c,2p,32p,a#5,g5,2f#,32p,a#5,g5,2f,32p,a#5,g5,2e,d#,8d";
-char *song = "PinkPanther:d=4,o=5,b=160:8d#,8e,2p,8f#,8g,2p,8d#,8e,16p,8f#,8g,16p,8c6,8b,16p,8d#,8e,16p,8b,2a#,2p,16a,16g,16e,16d,2e";
+//char *song = "PinkPanther:d=4,o=5,b=160:8d#,8e,2p,8f#,8g,2p,8d#,8e,16p,8f#,8g,16p,8c6,8b,16p,8d#,8e,16p,8b,2a#,2p,16a,16g,16e,16d,2e";
 //char *song="VanessaMae:d=4,o=6,b=70:32c7,32b,16c7,32g,32p,32g,32p,32d#,32p,32d#,32p,32c,32p,32c,32p,32c7,32b,16c7,32g#,32p,32g#,32p,32f,32p,16f,32c,32p,32c,32p,32c7,32b,16c7,32g,32p,32g,32p,32d#,32p,32d#,32p,32c,32p,32c,32p,32g,32f,32d#,32d,32c,32d,32d#,32c,32d#,32f,16g,8p,16d7,32c7,32d7,32a#,32d7,32a,32d7,32g,32d7,32d7,32p,32d7,32p,32d7,32p,16d7,32c7,32d7,32a#,32d7,32a,32d7,32g,32d7,32d7,32p,32d7,32p,32d7,32p,32g,32f,32d#,32d,32c,32d,32d#,32c,32d#,32f,16c";
 //char *song="DasBoot:d=4,o=5,b=100:d#.4,8d4,8c4,8d4,8d#4,8g4,a#.4,8a4,8g4,8a4,8a#4,8d,2f.,p,f.4,8e4,8d4,8e4,8f4,8a4,c.,8b4,8a4,8b4,8c,8e,2g.,2p";
 //char *song="Scatman:d=4,o=5,b=200:8b,16b,32p,8b,16b,32p,8b,2d6,16p,16c#.6,16p.,8d6,16p,16c#6,8b,16p,8f#,2p.,16c#6,8p,16d.6,16p.,16c#6,16b,8p,8f#,2p,32p,2d6,16p,16c#6,8p,16d.6,16p.,16c#6,16a.,16p.,8e,2p.,16c#6,8p,16d.6,16p.,16c#6,16b,8p,8b,16b,32p,8b,16b,32p,8b,2d6,16p,16c#.6,16p.,8d6,16p,16c#6,8b,16p,8f#,2p.,16c#6,8p,16d.6,16p.,16c#6,16b,8p,8f#,2p,32p,2d6,16p,16c#6,8p,16d.6,16p.,16c#6,16a.,16p.,8e,2p.,16c#6,8p,16d.6,16p.,16c#6,16a,8p,8e,2p,32p,16f#.6,16p.,16b.,16p.";
 //char *song="Popcorn:d=4,o=5,b=160:8c6,8a#,8c6,8g,8d#,8g,c,8c6,8a#,8c6,8g,8d#,8g,c,8c6,8d6,8d#6,16c6,8d#6,16c6,8d#6,8d6,16a#,8d6,16a#,8d6,8c6,8a#,8g,8a#,c6";
 //char *song="WeWishYou:d=4,o=5,b=200:d,g,8g,8a,8g,8f#,e,e,e,a,8a,8b,8a,8g,f#,d,d,b,8b,8c6,8b,8a,g,e,d,e,a,f#,2g,d,g,8g,8a,8g,8f#,e,e,e,a,8a,8b,8a,8g,f#,d,d,b,8b,8c6,8b,8a,g,e,d,e,a,f#,1g,d,g,g,g,2f#,f#,g,f#,e,2d,a,b,8a,8a,8g,8g,d6,d,d,e,a,f#,2g";
-#define OCTAVE_OFFSET 0
-char *p;
+//#define OCTAVE_OFFSET 0
+//char *p;
 
-int notes[] = { 0,
+/*int notes[] = { 0,
                 NOTE_C4, NOTE_CS4, NOTE_D4, NOTE_DS4, NOTE_E4, NOTE_F4, NOTE_FS4, NOTE_G4, NOTE_GS4, NOTE_A4, NOTE_AS4, NOTE_B4,
                 NOTE_C5, NOTE_CS5, NOTE_D5, NOTE_DS5, NOTE_E5, NOTE_F5, NOTE_FS5, NOTE_G5, NOTE_GS5, NOTE_A5, NOTE_AS5, NOTE_B5,
                 NOTE_C6, NOTE_CS6, NOTE_D6, NOTE_DS6, NOTE_E6, NOTE_F6, NOTE_FS6, NOTE_G6, NOTE_GS6, NOTE_A6, NOTE_AS6, NOTE_B6,
                 NOTE_C7, NOTE_CS7, NOTE_D7, NOTE_DS7, NOTE_E7, NOTE_F7, NOTE_FS7, NOTE_G7, NOTE_GS7, NOTE_A7, NOTE_AS7, NOTE_B7
-              };
+              };*/
 
 int fireforks[] = {0, 0, 1, //1
                    -1, 0, 0, //2
@@ -391,8 +391,8 @@ void setup()
   pinMode(GreenLedPin, OUTPUT);
   pinMode(BlueLedPin, OUTPUT);*/
 
-  tone1.begin(pinBuzzer);
-  song = parseSong(song);
+  //tone1.begin(pinBuzzer);
+  //song = parseSong(song);
 
   pinMode(LEpin, OUTPUT);
   pinMode(pinSHDN, OUTPUT);
@@ -522,7 +522,7 @@ void loop() {
   DownButtonState=0;
 #endif
 
-  p = playmusic(p);
+  //p = playmusic(p);
 
   if ((millis() - prevTime4FireWorks) > LEDsDelay)
   {
@@ -549,8 +549,8 @@ void loop() {
   if ((setButton.clicks > 0) || (ModeButtonState == 1)) //short click
   {
     modeChangedByUser = true;
-    p = 0; //shut off music )))
-    tone1.play(1000, 100);
+    //p = 0; //shut off music )))
+    //tone1.play(1000, 100);
     enteringEditModeTime = millis();
     /*if (value[DateFormatIndex] == US_DateFormat)
     {
@@ -612,7 +612,7 @@ void loop() {
   }
   if ((setButton.clicks < 0) || (ModeButtonState == -1)) //long click
   {
-    tone1.play(1000, 100);
+    //tone1.play(1000, 100);
     if (!editMode)
     {
       enteringEditModeTime = millis();
@@ -650,8 +650,8 @@ void loop() {
   if ((upButton.clicks > 0) || (UpButtonState == 1))
   {
     modeChangedByUser = true;
-    p = 0; //shut off music )))
-    tone1.play(1000, 100);
+    //p = 0; //shut off music )))
+    //tone1.play(1000, 100);
     incrementValue();
     if (!editMode)
     {
@@ -678,8 +678,8 @@ void loop() {
   if ((downButton.clicks > 0) || (DownButtonState == 1))
   {
     modeChangedByUser = true;
-    p = 0; //shut off music )))
-    tone1.play(1000, 100);
+    //p = 0; //shut off music )))
+    //tone1.play(1000, 100);
     dicrementValue();
     if (!editMode)
     {
@@ -715,7 +715,7 @@ void loop() {
   {
     if ((upButton.clicks < 0) || (UpButtonState == -1))
     {
-      tone1.play(1000, 100);
+      //tone1.play(1000, 100);
       RGBLedsOn = true;
       EEPROM.write(RGBLEDsEEPROMAddress, 1);
       Serial.println(F("RGB=on"));
@@ -723,7 +723,7 @@ void loop() {
     }
     if ((downButton.clicks < 0) || (DownButtonState == -1))
     {
-      tone1.play(1000, 100);
+      //tone1.play(1000, 100);
       RGBLedsOn = false;
       EEPROM.write(RGBLEDsEEPROMAddress, 0);
       Serial.println(F("RGB=off"));
@@ -848,8 +848,8 @@ void doTest()
   Serial.println();
   Serial.println(F("Start Test"));
   
-  p=song;
-  parseSong(p);
+  //p=song;
+  //parseSong(p);
   //p=0; //need to be deleted
 
   LEDsTest();
@@ -994,7 +994,7 @@ long wholenote;
 long duration;
 byte note;
 byte scale;
-char* parseSong(char *p)
+/*char* parseSong(char *p)
 {
   // Absolutely no error checking in here
   // format: d=N,o=N,b=NNN:
@@ -1041,11 +1041,11 @@ char* parseSong(char *p)
   // BPM usually expresses the number of quarter notes per minute
   wholenote = (60 * 1000L / bpm) * 4;  // this is the time for whole note (in milliseconds)
   return p;
-}
+}*/
 
 // now begin note loop
 static unsigned long lastTimeNotePlaying = 0;
-char* playmusic(char *p)
+/*char* playmusic(char *p)
 {
   if (*p == 0)
   {
@@ -1130,11 +1130,11 @@ char* playmusic(char *p)
 
   if (note)
   {
-    tone1.play(notes[(scale - 4) * 12 + note], duration);
+    //tone1.play(notes[(scale - 4) * 12 + note], duration);
     if (millis() - lastTimeNotePlaying > duration)
       lastTimeNotePlaying = millis();
     else return p;
-    tone1.stop();
+    //tone1.stop();
   }
   else
   {
@@ -1142,7 +1142,7 @@ char* playmusic(char *p)
   }
   Serial.println(F("Incorrect Song Format!"));
   return 0; //error
-}
+}*/
 
 
 void incrementValue()
@@ -1194,7 +1194,7 @@ void checkAlarmTime()
     lastTimeAlarmTriggired = millis();
     Alarm1SecondBlock = true;
     Serial.println(F("Wake up, Neo!"));
-    p = song;
+    //p = song;
   }
 }
 
@@ -1528,7 +1528,7 @@ void testDS3231TempSensor()
     for (int i=0; i<5; i++)
     {
       //tone(pinBuzzer, 1000);
-      tone1.play(1000, 1000);
+      //tone1.play(1000, 1000);
       delay(2000);
     }
   }

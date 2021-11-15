@@ -47,7 +47,7 @@ void LEDsTest()
 
 void rotateFireWorks()
 {
-  if (tone1.isPlaying()) return;
+  //if (tone1.isPlaying()) return;
   //int LEDspeed=10;
   if (!RGBLedsOn)
   {
